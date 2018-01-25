@@ -26,7 +26,7 @@ SelectLanguage.propTypes = {
   onSelect: PropTypes.func.isRequired
 }
 
-function RepoGrid (props) {
+function RepoGrid(props) {
   return (
     <ul className='popular-list'>
       {props.repos.map(function (repo, index) {
@@ -57,7 +57,7 @@ RepoGrid.propTypes = {
 }
 
 class Popular extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super(props);
     this.state = {
       selectedLanguage: 'All',
@@ -67,7 +67,7 @@ class Popular extends React.Component {
     this.updateLanguage = this.updateLanguage.bind(this);
   }
 
-  componentDidMount () {
+  componentDidMount() {
     this.updateLanguage(this.state.selectedLanguage);
   }
 
@@ -90,7 +90,6 @@ class Popular extends React.Component {
   }
 
   render() {
-
     return (
       <div>
         <SelectLanguage

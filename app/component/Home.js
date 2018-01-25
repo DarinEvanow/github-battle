@@ -1,8 +1,8 @@
-let React= require('react');
+let React = require('react');
 let Link = require('react-router-dom').Link;
 
 class Home extends React.Component {
-  render () {
+  render() {
     return (
       <div className='home-container'>
         <h1>GitHub Battle</h1>
