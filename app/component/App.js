@@ -7,6 +7,7 @@ let Nav = require('./Nav');
 let Home = require('./Home');
 let Battle = require('./Battle');
 let Popular = require('./Popular');
+let Results = require('./Results');
 let ErrorPage = require('./ErrorPage');
 
 class App extends React.Component {
@@ -18,6 +19,7 @@ class App extends React.Component {
           <Switch>
             <Route exact path='/' component={Home} />
             <Route exact path='/battle' component={Battle} />
+            <Route path='/battle/results' component={Results} />
             <Route path='/popular' component={Popular} />
             <Route component={ErrorPage} />
           </Switch>
