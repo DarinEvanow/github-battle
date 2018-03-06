@@ -1,6 +1,6 @@
-let React = require('react');
+const React = require('react');
 
-function ErrorPage() {
+function ErrorPage () {
   return (
     <p>404: Page Not Found</p>
   )
