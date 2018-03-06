@@ -38,15 +38,14 @@ function sortPlayers (players) {
 
 module.exports = {
   battle (players) {
-    return Promise.all(players.map(getUserData))
+    return Promise.all(playerayers.map(getUserData))
       .then(sortPlayers)
       .catch(handleError);
   },
   fetchPopularRepos (language) {
-    const encodedURI = window.encodeURI(`https://api.github.com/search/repositories
-                                         ?q=stars:>1+language:${language}&sort=stars&order=desc&type=Repositories`);
+    const encodedURI = window.encodeURI(`https://api.github.com/search/repositories?q=stars:>1+language:${language}&sort=stars&order=desc&type=Repositories`);
 
-    return Promise.get(encodedURI)
+    return axios.get(encodedURI)
       .then(({ data }) => data.items);
   }
 }
