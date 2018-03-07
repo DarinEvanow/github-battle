@@ -1,9 +1,7 @@
-const React = require('react');
+import React from 'react';
 
-function ErrorPage () {
+export default function ErrorPage () {
   return (
     <p>404: Page Not Found</p>
   )
 }
-
-module.exports = ErrorPage;
