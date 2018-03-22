@@ -3,7 +3,7 @@ let webpack = require('webpack');
 let HtmlWebpackPlugin = require('html-webpack-plugin');
 
 let config = {
-  entry: ['babel-polyfill', './app/index.js'],
+  entry: ['babel-polyfill', 'whatwg-fetch', './app/index.js'],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index_bundle.js',
